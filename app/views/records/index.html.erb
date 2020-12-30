@@ -1,0 +1,193 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  <%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      選手と一緒に築き上げていく
+    </h2>
+    <p class='service-explain'>
+      BuildUpはコーチと選手のための
+    </p>
+    <p class='service-explain'>
+      記録用アプリです
+    </p>
+    <p class='service-explain'>
+      上手くいったことも
+    </p>
+     <p class='service-explain'>
+      上手くいかなかったことも
+    </p>
+     <p class='service-explain'>
+      すべての出来事は
+    </p>
+    <p class='service-explain'>
+      選手を成長させてくれます
+    </p>
+    <p class='service-explain'>
+      日々を練習記録して
+    </p>
+    <p class='service-explain'>
+      振り返りながら
+    </p>
+    <p class='service-explain'>
+      試行錯誤しながら
+    </p>
+    <p class='service-explain'>
+      選手とともに成長していきましょう
+    </p>
+    <p class='service-explain'>
+     １日１日にの積み重ねが
+    </p>
+    <p class='service-explain'>
+    選手の成長として
+    </p>
+    <p class='service-explain'>
+    築き上げていかれるでしょう
+    </p>
+     <p class='service-explain'>
+    さぁ、始めよう 
+    </p>
+    <p class='service-explain'>
+     BuildUp For Future Players
+    </p>
+    <div class='store-btn'>
+      <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
+      <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
+    </div>
+   
+  </div>
+  <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
+   
+  <%# FURIMAが選ばれる3つの理由部分 %>
+  <div class='select-reason-contents'>
+    <h2 class='title'>
+      BuildUpができる3つの機能
+    </h2>
+    <ul class='reason-lists'>
+      <li class='list'>
+        <%= image_tag "osusume01.png", class:"list-pict" %>
+        <span class='reason-list-number'>1</span>
+        <h3 class='reason-list-text'>簡単に
+          <span class='reason-list-blue-text'>記録できる</span>
+          
+        </h3>
+        <p class='reason-list-description'>
+          フォーマットに沿って入力するだけで簡単に練習内容や出来事を記録できる！
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "osusume02.png", class:"list-pict" %>
+        <span class='reason-list-number'>2</span>
+        <h3 class='reason-list-text'>
+        いつでも
+          <span class='reason-list-blue-text'>確認できる</span>
+        
+        </h3>
+        <p class='reason-list-description'>
+          記録を確認し、振り返ることで選手の成長を実感できる！
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "furima-intro03.png", class:"list-pict" %>
+        <span class='reason-list-number'>3</span>
+        <h3 class='reason-list-text'>
+          記録を
+          <span class='reason-list-blue-text'>シェア</span>
+        </h3>
+        <p class='reason-list-description'>
+          記録を共有することで、指導者仲間の輪が広がる！
+        </p>
+      </li>
+    </ul>
+  </div>
+  <%# /FURIMAが選ばれる3つの理由部分 %>
+<div class='ad-contents'>
+    <h2 class='ad-title'>
+      未来ある選手のために
+    </h2>
+    <p class='ad-explain'>
+      選手は、指導者のコントローラーではありません。
+    </p>
+    <p class='ad-explain'>
+      個性や心を尊重しましょう！
+    </p>
+    <p class='ad-explain'>
+      試行錯誤して選手と成長していきましょう。
+    </p>
+<div class='store-btn'>
+      <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
+      <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
+    </div>
+  </div>
+  <%# 画面中央の「会員数日本一位」帯部分 %>
+  
+  <%# /画面中央の「会員数日本一位」帯部分 %>
+
+  <%# FURIMAの特徴 %>
+  
+  <%# /FURIMAの特徴 %>
+
+  <%# 商品一覧 %>
+  <div class='item-contents'>
+    <h2 class='title'>New Records</h2>
+    <%= link_to '新規投稿記録', "#", class: "subtitle" %>
+    <ul class='item-lists'>
+
+      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+      <li class='list'>
+        <%= link_to "#" do %>
+        <div class='item-img-content'>
+          <%= image_tag "item-sample.png", class: "item-img" %>
+
+          <%# 商品が売れていればsold outを表示しましょう %>
+         
+          <%# //商品が売れていればsold outを表示しましょう %>
+
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= "記録テーマ" %>
+          </h3>
+          <div class='item-price'>
+            <span><%= "TR内容" %><br><%= '投稿者' %></span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+
+      <%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+      <%# 商品がある場合は表示されないようにしましょう %>
+      <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            記録を投稿してね！
+          </h3>
+          <div class='item-price'>
+            <span>99999999円<br>(税込み)</span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <%# //商品がある場合は表示されないようにしましょう %>
+      <%# //商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+    </ul>
+  </div>
+  <%# /商品一覧 %>
+</div>
+<%= link_to('#', class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>記録する</span>
+  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
+<%= render "shared/footer" %>

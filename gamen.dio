@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2020-12-30T03:03:22.066Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" version="13.10.0" etag="S5UjGVJeDM_cIwdE3OqG" type="embed">
+<mxfile host="65bd71144e" modified="2020-12-30T03:12:21.227Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" version="13.10.0" etag="M7P2AyHOTZ0UXH6lmA5B" type="embed">
     <diagram id="W64Ow3N9FNHRvOX0aFHs" name="ページ1">
         <mxGraphModel dx="704" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -19,11 +19,25 @@
                 <mxCell id="6" value="マイページ&lt;br&gt;（自分の投稿も見れる）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="620" y="320" width="150" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="投稿編集ページ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="7" value="投稿詳細ページ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="620" y="440" width="150" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=-0.02;exitY=0.871;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="617" y="700" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="540" y="501"/>
+                            <mxPoint x="540" y="700"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="8" value="投稿削除ページ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="620" y="660" width="150" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="9">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="620" y="580" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="9" value="投稿編集ページ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="620" y="550" width="150" height="70" as="geometry"/>
@@ -90,6 +104,21 @@
                         <mxPoint x="480" y="358" as="sourcePoint"/>
                         <mxPoint x="618" y="358" as="targetPoint"/>
                         <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="7">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="480" y="400" as="sourcePoint"/>
+                        <mxPoint x="530" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="694.5" y="510" as="sourcePoint"/>
+                        <mxPoint x="694.5" y="550" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="694.5" y="530"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
             </root>
