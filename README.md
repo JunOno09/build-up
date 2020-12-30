@@ -1,24 +1,64 @@
-# README
+# BUILD-UP テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false,              |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| first_name         | string | null: false               |
+| family_name        | string | null: false               |
+| family_name_kana   | string | null: false               |
+| first_name_kana    | string | null: false               |
+| birth_day          | date   | null: false               |
 
-* Ruby version
+### Association
+- has_many :records
+- has_many :comments
 
-* System dependencies
 
-* Configuration
+## records テーブル
 
-* Database creation
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| tr_theme         | string     | null: false                    |
+| tr_day           | date       | null: false                    |
+| category_id      | integer    | null: false                    |
+| tr_content       | text       | null: false                    |
+| mvp              | string     | null: false                    |
+| mvp_reason       | text       | null: false                    |
+| impression       | text       | null: false                    |
+| user             | references | foreign_key: true              |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to :user
+- has_many :comments
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+## comment テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| text    | text       | null: false                    |
+| user    | references | foreign_key: true              |
+| record  | references | foreign_key: true              |
+
+### Association
+
+- belongs_to :user
+- belongs_to :record
+
+## favorite テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user    | references | foreign_key: true              |
+| record  | references | foreign_key: true              |
+
+### Association
+
+- belongs_to :user
+- belongs_to :record
