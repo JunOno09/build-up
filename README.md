@@ -28,7 +28,8 @@
 | tr_content       | text       | null: false                    |
 | mvp              | string     | null: false                    |
 | mvp_reason       | text       | null: false                    |
-| impression       | text       | null: false                    |
+| event            | string     | null: false                    |
+| evaluation_id    | integer    | null: false                    |
 | user             | references | foreign_key: true              |
 
 ### Association
