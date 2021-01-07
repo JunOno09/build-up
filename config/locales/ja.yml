@@ -8,6 +8,16 @@ ja:
        first_name: 名前
        family_name_kana: 名字（カナ）
        first_name_kana: 名前（カナ）
-     tweet:
+     record:
        text: テキスト
        image: 画像
+       tr_theme: 練習のテーマ
+       tr_content: 練習の説明や感想
+       tr_day: 練習日
+       mvp: 練習のMVP
+       mvp_reason: MVPに選んだ理由
+       event: スポーツの種目
+       category_id: カテゴリー
+       evaluation_id: 練習の評価
+
+
