@@ -23,7 +23,7 @@
  <% if user_signed_in? && current_user.id == @record.user_id  %>
     <%= link_to '練習記録の編集', edit_record_path(@record.id), method: :get, class: "item-red-btn" %>
     <p class='or-text'>or</p>
-    <%= link_to '削除', "#", method: :delete, class:'item-destroy' %>
+    <%= link_to '削除', record_path(@record.id), method: :delete, class:'item-destroy' %>
 <% elsif user_signed_in? %>
     <%# 商品が売れていない場合はこちらを表示しましょう %>
     <%= link_to " #{@record.user.nickname}さんの投稿一覧", "#" ,class:"item-red-btn"%>

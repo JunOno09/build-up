@@ -1,4 +1,5 @@
 class RecordsController < ApplicationController
+  before_action :set_record, only: [:edit, :show, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
@@ -19,26 +20,36 @@ class RecordsController < ApplicationController
   end
 
   def show
-    @record = Record.find(params[:id])
   end
 
   def edit
-    @record = Record.find(params[:id])
     unless current_user == @record.user
       redirect_to root_path
     end
   end
 
   def update
-    @record = Record.find(params[:id])
     if current_user.id == @record.user_id && @record.update(record_params) 
     redirect_to record_path
     else 
       render:edit
     end
   end
+
+  def destroy
+    if current_user.id == @record.user_id && @record.destroy
+    redirect_to root_path
+    end
+  end
+
+
   private
   def record_params
     params.require(:record).permit(:tr_theme, :tr_content, :category_id, :evaluation_id, :tr_day, :mvp, :mvp_reason, :image, :event).merge(user_id: current_user.id)
   end
+
+  def set_record
+    @record = Record.find(params[:id])
+  end
+
 end
