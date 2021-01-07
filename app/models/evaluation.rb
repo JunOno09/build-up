@@ -1,16 +1,12 @@
 class Evaluation < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
-    { id: 2, name: '経済' },
-    { id: 3, name: '政治' },
-    { id: 4, name: '地域' },
-    { id: 5, name: '国際' },
-    { id: 6, name: 'IT' },
-    { id: 7, name: 'エンタメ' },
-    { id: 8, name: 'スポーツ' },
-    { id: 9, name: 'グルメ' },
-    { id: 10, name: 'その他' }
-  ]
+    { id: 2, name: '大変満足' },
+    { id: 3, name: '満足' },
+    { id: 4, name: '普通' },
+    { id: 5, name: '良くなかった' },
+    { id: 6, name: '大変良くなかった' }
+    ]
 
   include ActiveHash::Associations
   has_many :records
