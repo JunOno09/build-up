@@ -10,7 +10,7 @@ app/assets/stylesheets/items/new.css %>
     <%= form_with(model: @record, local: true) do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-    <%# render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
     <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
 
     <%# 出品画像 %>
@@ -103,30 +103,7 @@ app/assets/stylesheets/items/new.css %>
        <%= f.text_area :mvp_reason, class:"items-text", id:"item-name", placeholder:"例)いつもより笑顔が多かった", maxlength:"40" %>
       </div>
     </div>
-    <%# /配送について %>
-
-    <%# 販売価格 %>
-   
-    <%# /販売価格 %>
-
-    <%# 注意書き %>
-    <div class="caution">
-      <p class="sentence">
-        <a href="#">禁止されている出品、</a>
-        <a href="#">行為</a>
-        を必ずご確認ください。
-      </p>
-      <p class="sentence">
-        またブランド品でシリアルナンバー等がある場合はご記載ください。
-        <a href="#">偽ブランドの販売</a>
-        は犯罪であり処罰される可能性があります。
-      </p>
-      <p class="sentence">
-        また、出品をもちまして
-        <a href="#">加盟店規約</a>
-        に同意したことになります。
-      </p>
-    </div>
+    
     <%# /注意書き %>
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
