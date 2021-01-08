@@ -1,8 +1,42 @@
 <%= render "shared/header" %>
 
+  <div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= "#{@user.nickname}さんの投稿一覧ページ" %>
+    </h2>
+    <div class="item-explain-box">
+      <span><%= "#{@user.nickname}さんのプロフィール" %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">投稿者</th>
+          <td class="detail-value"><%= @user.nickname %></td>
+        </tr>
+       
+        <tr>
+          <th class="detail-item">MVP</th>
+          <td class="detail-value"><%= @user.birth_day %></td>
+        </tr>
 
-
+        <tr>
+          <th class="detail-item">MVP</th>
+          <td class="detail-value"><%= @user.family_name %></td>
+        </tr>
+        
+        
+      </tbody>
+    </table>
+    <% if user_signed_in? && current_user.id  %>
+    <%= link_to 'ユーザー情報の編集', "#", method: :get, class: "item-red-btn" %>
+   <% end %>
+  </div>
   
+
+ 
+  
+</div>
     
 
 
