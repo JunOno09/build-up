@@ -1,94 +1,9 @@
 <%= render "shared/header" %>
 
-<%# 商品の概要 %>
-<div class="item-show">
-  <div class="item-box">
-    <h2 class="name">
-      <%= "練習のテーマ[#{@record.tr_theme}]" %>
-    </h2>
-    <div class='item-img-content'>
-      <%= image_tag @record.image ,class:"item-box-img" %>
-      <%# 商品が売れている場合は、sold outを表示しましょう %>
-     
-      <%# //商品が売れている場合は、sold outを表示しましょう %>
-    </div>
-    <div class="item-price-box">
-      <span class="item-price">
-       <%= "スポーツの種目[#{@record.event}]" %>
-      </span>
-     
-    </div>
 
-    <%# ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
- <% if user_signed_in? && current_user.id == @record.user_id  %>
-    <%= link_to '練習記録の編集', edit_record_path(@record.id), method: :get, class: "item-red-btn" %>
-    <p class='or-text'>or</p>
-    <%= link_to '削除', record_path(@record.id), method: :delete, class:'item-destroy' %>
-<% elsif user_signed_in? %>
-    <%# 商品が売れていない場合はこちらを表示しましょう %>
-    <%= link_to " #{@record.user.nickname}さんの投稿一覧", "#" ,class:"item-red-btn"%>
-    <%# //商品が売れていない場合はこちらを表示しましょう %>
- <% end %>
 
-    <%# //ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
-
-    <div class="item-explain-box">
-      <span><%= @record.tr_content %></span>
-    </div>
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-item">投稿者</th>
-          <td class="detail-value"><%= @record.user.nickname %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">カテゴリー</th>
-          <td class="detail-value"><%= @record.category.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">MVP</th>
-          <td class="detail-value"><%= @record.mvp %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">MVPに選んだ理由</th>
-          <td class="detail-value"><%= @record.mvp_reason %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">練習の評価</th>
-          <td class="detail-value"><%= @record.evaluation.name %></td>
-        </tr>
-        
-      </tbody>
-    </table>
-    <div class="option">
-      <div class="favorite-btn">
-        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-        <span>お気に入り 0</span>
-      </div>
-      <div class="report-btn">
-        <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
-        <span>不適切な商品の通報</span>
-      </div>
-    </div>
-  </div>
-  <%# /商品の概要 %>
-
-  <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-      <p class="comment-warn">
-        相手のことを考え丁寧なコメントを心がけましょう。
-        <br>
-        不快な言葉遣いなどは利用制限や退会処分となることがあります。
-      </p>
-      <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-        <span>コメントする<span>
-      </button>
-    </form>
-  </div>
   
-  
-</div>
+    
+
 
 <%= render "shared/footer" %>
