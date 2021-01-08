@@ -1,0 +1,44 @@
+<%= render "shared/header" %>
+
+  <div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= "#{@user.nickname}さんの投稿一覧ページ" %>
+    </h2> 
+      </tbody>
+    </table>
+  </div>
+  <ul class='item-lists'>
+      <% @records.each do |record| %>
+      <li class='list'>
+        <%= link_to record_path(record.id) do %>
+        <div class='item-img-content'>
+          <%= image_tag record.image, class: "item-img" %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= record.tr_theme %>
+          </h3>
+          <div class='item-price'>
+            <span><%= record.event %><br><%= record.user.nickname %></span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+
+      
+     
+    </ul>
+
+ 
+  
+</div>
+    
+
+
+<%= render "shared/footer" %>
