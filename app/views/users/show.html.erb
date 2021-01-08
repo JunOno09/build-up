@@ -4,35 +4,36 @@
   <div class="item-box">
     <h2 class="name">
       <%= "#{@user.nickname}さんの投稿一覧ページ" %>
-    </h2>
-    <div class="item-explain-box">
-      <span><%= "#{@user.nickname}さんのプロフィール" %></span>
-    </div>
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-item">投稿者</th>
-          <td class="detail-value"><%= @user.nickname %></td>
-        </tr>
-       
-        <tr>
-          <th class="detail-item">MVP</th>
-          <td class="detail-value"><%= @user.birth_day %></td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">MVP</th>
-          <td class="detail-value"><%= @user.family_name %></td>
-        </tr>
-        
-        
+    </h2> 
       </tbody>
     </table>
-    <% if user_signed_in? && current_user.id  %>
-    <%= link_to 'ユーザー情報の編集', "#", method: :get, class: "item-red-btn" %>
-   <% end %>
   </div>
-  
+  <ul class='item-lists'>
+      <% @records.each do |record| %>
+      <li class='list'>
+        <%= link_to record_path(record.id) do %>
+        <div class='item-img-content'>
+          <%= image_tag record.image, class: "item-img" %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= record.tr_theme %>
+          </h3>
+          <div class='item-price'>
+            <span><%= record.event %><br><%= record.user.nickname %></span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+
+      
+     
+    </ul>
 
  
   
