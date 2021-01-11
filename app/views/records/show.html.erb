@@ -76,24 +76,31 @@
   <div class="comment-box">
      <% if user_signed_in? %>
         <%= form_with(model: [@record,@comment],local:true) do |f| %>
-            <div class="field">
-              <%= f.label :text, "コメント" %><br />
-               <%= f.text_field :text %>
+            <div class="">
+              <%= f.label :text, "コメントをしよう" %><br />
+              <%= f.text_field :text , rows: "2" %>
+              <p class="comment-warn">
+                相手のことを考え丁寧なコメントを心がけましょう。
+              <br>
+              不快な言葉遣いなどは利用制限や退会処分となることがあります。
+              </p>
             </div>
             <div class="actions">
-               <%= f.submit "送信する", class: :form__btn  %>
+               <%= f.submit "送信する", class: :comment_btn  %>
             </div>
-           <% end %>  
-         <% end%>
+         <% end %>  
+      <% else %>
+         <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+
+      <% end%>
         <%# // ログインしているユーザーには上記を表示する %>
-        <ul class="comments_lists">
+        <ul class="comments">
+         <h3>＜コメント一覧＞</h3>
           <% if @comments %>
             <% @comments.each do |comment| %>
-            <%# <ul class="comments_lists"> %>
-              <%# 投稿に紐づくコメントを一覧する処理を記述する %>
-                <li class="comments_list">
-                    <%= comment.text %>
+                <li class="comments">
                    <%= link_to comment.user.nickname, user_path(comment.user_id), class: :comment_user %>
+                   <%= comment.text %>
                </li>
               <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
            </ul>
