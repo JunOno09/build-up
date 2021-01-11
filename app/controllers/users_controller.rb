@@ -6,4 +6,10 @@ class UsersController < ApplicationController
     @records = @user.records
   end
 
+
+  def destroy
+    @user = User.find(params[:id])
+    @records = @user.records
+    @comments = @user.comments
+  end
 end

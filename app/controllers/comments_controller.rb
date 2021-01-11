@@ -11,6 +11,13 @@ class CommentsController < ApplicationController
       end
     end
   
+    def destroy
+      @comment = Comment.find(params[:id])
+      if current_user.id == @comment.user_id && @comment.destroy
+       redirect_to page_path(params[:record_id])
+      end
+    end
+
     private
     def comment_params
       params.require(:comment).permit(:text).merge(user_id: current_user.id, record_id: params[:record_id]) 
