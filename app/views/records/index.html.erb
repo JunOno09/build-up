@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <div class='main'>
 
-  <%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
+  <%# 画面上部の帯部分 %>
   <div class='title-contents'>
     <h2 class='service-title'>
       選手と一緒に築き上げていく
@@ -29,9 +29,9 @@
     </div>
    
   </div>
-  <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
+  <%# /画面上部の帯部分  %>
    
-  <%# FURIMAが選ばれる3つの理由部分 %>
+  <%# 3つの理由部分 %>
   <div class='select-reason-contents'>
     <h2 class='title'>
       BuildUpができる3つの機能
@@ -73,7 +73,7 @@
       </li>
     </ul>
   </div>
-  <%# /FURIMAが選ばれる3つの理由部分 %>
+  <%# 3つの理由部分 %>
 <div class='ad-contents'>
     <h2 class='ad-title'>
       思い出の一枚を忘れずに
@@ -90,21 +90,14 @@
       <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
     </div>
   </div>
-  <%# 画面中央の「会員数日本一位」帯部分 %>
-  
-  <%# /画面中央の「会員数日本一位」帯部分 %>
-
-  <%# FURIMAの特徴 %>
-  
-  <%# /FURIMAの特徴 %>
-
-  <%# 商品一覧 %>
+  <
+  <%# 投稿一覧 %>
   <div class='item-contents'>
     <h2 class='title'>New Records</h2>
     <%= link_to '新規投稿記録', "#", class: "subtitle" %>
     <ul class='item-lists'>
       <% @records.each do |record| %>
-      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+      
       <li class='list'>
         <%= link_to record_path(record.id) do %>
         <div class='item-img-content'>
@@ -125,10 +118,7 @@
         <% end %>
       </li>
       <% end %>
-      <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
-
-      <%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>
-      <%# 商品がある場合は表示されないようにしましょう %>
+      
        <% if @records[0] == nil %>
       <li class='list'>
         <%= link_to '#' do %>
@@ -148,11 +138,10 @@
         <% end %>
        <% end %> 
       </li>
-      <%# //商品がある場合は表示されないようにしましょう %>
-      <%# //商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+      
     </ul>
   </div>
-  <%# /商品一覧 %>
+  <%# /投稿一覧 %>
 </div>
 <%= link_to(new_record_path, class: 'purchase-btn') do %>
   <span class='purchase-btn-text'>記録する</span>
