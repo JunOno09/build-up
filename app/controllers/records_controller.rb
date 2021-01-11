@@ -20,6 +20,8 @@ class RecordsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @record.comments
   end
 
   def edit
