@@ -101,7 +101,7 @@
                 <li class="comments">
                    <%= link_to comment.user.nickname, user_path(comment.user_id), class: :comment_user %>
                    <%= comment.text %>
-                  <%# link_to 'コメントを削除する', record_comment_path(comment.user_id), confirm: 'Are you sure?', method: :delete %>
+                  <%= link_to 'コメントを削除する', record_comment_path(@record, comment), confirm: 'Are you sure?', method: :delete %>
                </li>
               <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
            </ul>
