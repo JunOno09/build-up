@@ -21,7 +21,6 @@ class CommentsController < ApplicationController
       else
         render "records/show"
       end
-      
     end
 
     private

@@ -4,18 +4,14 @@
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
-      <%= "練習のテーマ[#{@record.tr_theme}]" %>
+    <p>練習のテーマ</p>
+      <%= "[#{@record.tr_theme}]" %>
     </h2>
     <div class='item-img-content'>
       <%= image_tag @record.image ,class:"item-box-img" %>
       
     </div>
-    <div class="item-price-box">
-      <span class="item-price">
-       <%= "スポーツの種目[#{@record.event}]" %>
-      </span>
-     
-    </div>
+    
 
    
  <% if user_signed_in? && current_user.id == @record.user_id  %>
@@ -29,13 +25,19 @@
   
 
     <div class="item-explain-box">
-      <span><%= @record.tr_content %></span>
+     <div class="item-price-box">
+    </div>
+      
     </div>
     <table class="detail-table">
       <tbody>
         <tr>
           <th class="detail-item">投稿者</th>
           <td class="detail-value"><%= @record.user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">種目</th>
+          <td class="detail-value"><%= @record.event %></td>
         </tr>
         <tr>
           <th class="detail-item">カテゴリー</th>
@@ -52,6 +54,10 @@
         <tr>
           <th class="detail-item">練習の評価</th>
           <td class="detail-value"><%= @record.evaluation.name %></td>
+        </tr>
+         <tr>
+          <th class="detail-item">練習の内容や感想</th>
+          <td class="detail-value"><%= @record.tr_content %></td>
         </tr>
         
       </tbody>
@@ -96,7 +102,7 @@
             <% @comments.each do |comment| %>
                 <li class="comments">
                    <%= link_to comment.user.nickname, user_path(comment.user_id), class: :comment_user %>
-                   <%= comment.text %>
+                   <%= comment.text %><br>
                   <%= link_to 'コメントを削除する', record_comment_path(@record, comment), confirm: 'Are you sure?', method: :delete %>
                </li>
               
