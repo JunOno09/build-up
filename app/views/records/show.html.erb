@@ -1,45 +1,43 @@
 <%= render "shared/header" %>
 
-<%# 商品の概要 %>
+<%# 記録の概要 %>
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
-      <%= "練習のテーマ[#{@record.tr_theme}]" %>
+    <p>練習のテーマ</p>
+      <%= "[#{@record.tr_theme}]" %>
     </h2>
     <div class='item-img-content'>
       <%= image_tag @record.image ,class:"item-box-img" %>
-      <%# 商品が売れている場合は、sold outを表示しましょう %>
-     
-      <%# //商品が売れている場合は、sold outを表示しましょう %>
+      
     </div>
-    <div class="item-price-box">
-      <span class="item-price">
-       <%= "スポーツの種目[#{@record.event}]" %>
-      </span>
-     
-    </div>
+    
 
-    <%# ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
+   
  <% if user_signed_in? && current_user.id == @record.user_id  %>
     <%= link_to '練習記録の編集', edit_record_path(@record.id), method: :get, class: "item-red-btn" %>
     <p class='or-text'>or</p>
     <%= link_to '削除', record_path(@record.id), method: :delete, class:'item-destroy' %>
 <% elsif user_signed_in? %>
-    <%# 商品が売れていない場合はこちらを表示しましょう %>
-    <%= link_to " #{@record.user.nickname}さんの投稿一覧", user_path(@record.user.id) ,class:"item-red-btn"%>
-    <%# //商品が売れていない場合はこちらを表示しましょう %>
+    <%= link_to " #{@record.user.nickname}さんの投稿一覧", user_path(@record.user.id) ,class:"item-red-btn"%>   
  <% end %>
 
-    <%# //ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
+  
 
     <div class="item-explain-box">
-      <span><%= @record.tr_content %></span>
+     <div class="item-price-box">
+    </div>
+      
     </div>
     <table class="detail-table">
       <tbody>
         <tr>
           <th class="detail-item">投稿者</th>
           <td class="detail-value"><%= @record.user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">種目</th>
+          <td class="detail-value"><%= @record.event %></td>
         </tr>
         <tr>
           <th class="detail-item">カテゴリー</th>
@@ -57,6 +55,10 @@
           <th class="detail-item">練習の評価</th>
           <td class="detail-value"><%= @record.evaluation.name %></td>
         </tr>
+         <tr>
+          <th class="detail-item">練習の内容や感想</th>
+          <td class="detail-value"><%= @record.tr_content %></td>
+        </tr>
         
       </tbody>
     </table>
@@ -71,7 +73,7 @@
       </div>
     </div>
   </div>
-  <%# /商品の概要 %>
+  <%# /記録の概要 %>
 
   <div class="comment-box">
      <% if user_signed_in? %>
@@ -93,17 +95,17 @@
          <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
 
       <% end%>
-        <%# // ログインしているユーザーには上記を表示する %>
+       
         <ul class="comments">
          <h3>＜コメント一覧＞</h3>
           <% if @comments %>
             <% @comments.each do |comment| %>
                 <li class="comments">
                    <%= link_to comment.user.nickname, user_path(comment.user_id), class: :comment_user %>
-                   <%= comment.text %>
+                   <%= comment.text %><br>
                   <%= link_to 'コメントを削除する', record_comment_path(@record, comment), confirm: 'Are you sure?', method: :delete %>
                </li>
-              <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
+              
            </ul>
           <% end %>
         <% end %>

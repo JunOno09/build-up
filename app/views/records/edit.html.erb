@@ -1,5 +1,5 @@
 <%# cssは商品出品のものを併用しています。
-app/assets/stylesheets/items/new.css %>
+app/assets/stylesheets/records/new.css %>
 
 <div class="items-sell-contents">
   <header class="items-sell-header">
@@ -9,11 +9,10 @@ app/assets/stylesheets/items/new.css %>
     <h2 class="items-sell-title">練習記録の情報を入力</h2>
     <%= form_with(model: @record, local: true) do |f| %>
 
-    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
     <%= render 'shared/error_messages', model: f.object %>
-    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+    
 
-    <%# 出品画像 %>
+    <%# 記録画像 %>
     <div class="img-upload">
       <div class="weight-bold-text">
         思い出の1枚
@@ -26,8 +25,8 @@ app/assets/stylesheets/items/new.css %>
         <%= f.file_field :image, id:"item-image" %>
       </div>
     </div>
-    <%# /出品画像 %>
-    <%# 商品名と商品説明 %>
+    <%# /記録画像 %>
+    <%# テーマと説明 %>
     <div class="new-items">
       <div class="weight-bold-text">
         練習のテーマ
@@ -42,9 +41,9 @@ app/assets/stylesheets/items/new.css %>
         <%= f.text_area :tr_content, class:"items-text", id:"item-info", placeholder:"練習の説明（必須 1,000文字まで）（練習内容のポイント、感想など）例）シュート練習をしました。いろいろな種類のシュート練習をしたので、子ども達はとても楽しそうでした。" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
-    <%# /商品名と商品説明 %>
+    <%# /テーマ名と説明 %>
 
-    <%# 商品の詳細 %>
+    <%# 練習の詳細 %>
    <div class="items-detail">
       <div class="weight-bold-text">練習の詳細</div>
       <div class="form">
@@ -78,9 +77,9 @@ app/assets/stylesheets/items/new.css %>
         <%= f.collection_select(:category_id,Category.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
       </div>
     </div>
-    <%# /商品の詳細 %>
+    <%# /練習の詳細 %>
 
-    <%# 配送について %>
+    <%# 振り返り %>
     <div class="items-detail">
       <div class="weight-bold-text question-text">
         <span>練習の振り返り</span>
@@ -104,7 +103,7 @@ app/assets/stylesheets/items/new.css %>
       </div>
     </div>
     
-    <%# /注意書き %>
+    
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
       <%= f.submit "変更する" ,class:"sell-btn" %>
