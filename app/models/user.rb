@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
          has_many :records
          has_many :comments
+         has_many :likes
 
          validates :email, presence: true,uniqueness: true
 
