@@ -9,11 +9,8 @@
     </h2>
     <div class='item-img-content'>
       <%= image_tag @record.image ,class:"item-box-img" %>
-      
     </div>
-    
 
-   
  <% if user_signed_in? && current_user.id == @record.user_id  %>
     <%= link_to '練習記録の編集', edit_record_path(@record.id), method: :get, class: "item-red-btn" %>
     <p class='or-text'>or</p>
