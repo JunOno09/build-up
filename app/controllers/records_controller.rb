@@ -22,6 +22,8 @@ class RecordsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @record.comments.includes(:user)
+    # @like = Like.new
+    #  @likes = @record.likes.includes(:user)
   end
 
   def edit
