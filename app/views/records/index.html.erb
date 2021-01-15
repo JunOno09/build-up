@@ -99,7 +99,6 @@
     <%= link_to '新規投稿記録', "#", class: "subtitle" %>
     <ul class='item-lists'>
       <% @records.each do |record| %>
-      
       <li class='list'>
         <%= link_to record_path(record.id) do %>
         <div class='item-img-content'>
@@ -140,9 +139,10 @@
         <% end %>
        <% end %> 
       </li>
-      
     </ul>
+    <%= paginate @records %>
   </div>
+  
   <%# /投稿一覧 %>
 </div>
 <%= link_to(new_record_path, class: 'purchase-btn') do %>
