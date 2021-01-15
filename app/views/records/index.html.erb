@@ -7,8 +7,9 @@
       選手と一緒に築き上げていく
     </h2>
     <p class='service-explain'>
-      BuildUpはコーチと選手のための<br>
-      記録用アプリです
+      BuildUpは<br>
+      コーチと選手のための<br>
+      記録用アプリです<br>
       上手くいったことも<br>
       上手くいかなかったことも<br>
       すべての出来事は<br>
@@ -16,7 +17,8 @@
       日々を練習記録して<br>
       振り返りながら<br>
       試行錯誤しながら<br>
-      選手とともに成長していきましょう<br>
+      コーチも選手とともに<br>
+      成長していきましょう<br>
       １日１日にの積み重ねが<br>
       選手の成長として<br>
       築き上げていかれるでしょう<br>
@@ -111,7 +113,7 @@
             <span><%= record.event %><br><%= record.user.nickname %></span>
             <div class='star-btn'>
               <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
+              <span class='star-count'><%= record.likes.count %></span>
             </div>
           </div>
         </div>

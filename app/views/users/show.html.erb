@@ -23,7 +23,7 @@
             <span><%= record.event %><br><%= record.user.nickname %></span>
             <div class='star-btn'>
               <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
+              <span class='star-count'><%= record.likes.count %></span>
             </div>
           </div>
         </div>
