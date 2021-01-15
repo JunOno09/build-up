@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-  <div class="item-show">
+<div class="item-show">
   <div class="item-box">
     <h2 class="name">
       <%= "#{@user.nickname}さんの投稿一覧ページ" %>
@@ -8,6 +8,7 @@
       </tbody>
     </table>
   </div>
+  
   <ul class='item-lists'>
       <% @records.each do |record| %>
       <li class='list'>
@@ -29,16 +30,8 @@
         </div>
         <% end %>
       </li>
-      <% end %>
-
-      
-     
-    </ul>
-
- 
-  
-</div>
-    
-
-
+      <% end %> 
+  </ul>
+  <%# paginate @users %>
+ </div>
 <%= render "shared/footer" %>
