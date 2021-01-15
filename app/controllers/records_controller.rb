@@ -4,6 +4,7 @@ class RecordsController < ApplicationController
 
   def index
     @records = Record.includes(:user).order("created_at DESC")
+    @records = Record.page(params[:page]).per(10).order("created_at DESC")
   end
 
   def new

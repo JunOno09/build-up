@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-  <div class="item-show">
+<div class="item-show">
   <div class="item-box">
     <h2 class="name">
       <%= "#{@user.nickname}さんの投稿一覧ページ" %>
@@ -8,6 +8,7 @@
       </tbody>
     </table>
   </div>
+  
   <ul class='item-lists'>
       <% @records.each do |record| %>
       <li class='list'>
@@ -23,22 +24,14 @@
             <span><%= record.event %><br><%= record.user.nickname %></span>
             <div class='star-btn'>
               <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
+              <span class='star-count'><%= record.likes.count %></span>
             </div>
           </div>
         </div>
         <% end %>
       </li>
-      <% end %>
-
-      
-     
-    </ul>
-
- 
-  
-</div>
-    
-
-
+      <% end %> 
+  </ul>
+  <%# paginate @users %>
+ </div>
 <%= render "shared/footer" %>

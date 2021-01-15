@@ -77,6 +77,9 @@
         <p><span>お気に入りされた数: </span><%= @record.likes.count %></p>
       </div>
       <% else %>
+       <div class="count-btn">
+        <p><span>お気に入りされた数: </span><%= @record.likes.count %></p>
+      </div>
         <p>※※※お気に入りをするにはユーザー登録をしましょう※※※</p>
       <% end %>
     </div>
@@ -85,7 +88,7 @@
   <div class="comment-box">
      <% if user_signed_in? %>
         <%= form_with(model: [@record,@comment],local:true) do |f| %>
-            <div class="">
+            <div class="comments">
               <%= f.label :text, "コメントをしよう" %><br />
               <%= f.text_field :text , rows: "2" %>
               <p class="comment-warn">
@@ -97,12 +100,8 @@
             <div class="actions">
                <%= f.submit "送信する", class: :comment_btn  %>
             </div>
-         <% end %>  
-     <% else %>
-         <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-    <% end%>
-       
-        <ul class="comments">
+         <% end %>
+         <ul class="comments">
          <h3>＜コメント一覧＞</h3>
           <% if @comments %>
             <% @comments.each do |comment| %>
@@ -111,10 +110,12 @@
                    <%= comment.text %><br>
                   <%= link_to 'コメントを削除する', record_comment_path(@record, comment), confirm: 'Are you sure?', method: :delete %>
                </li>
-              
            </ul>
           <% end %>
-        <% end %>
+        <% end %>  
+    <% end%>
+       
+        
   </div>
   
   
