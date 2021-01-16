@@ -24,4 +24,12 @@ class Record < ApplicationRecord
   end
 
 
+  def self.search(search)
+    if search != ""
+      Record.where('event LIKE(?)', "%#{search}%")
+    else
+      Record.all
+    end
+  end
+
 end

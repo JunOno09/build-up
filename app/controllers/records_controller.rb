@@ -1,6 +1,6 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: [:edit, :show, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :search]
 
   def index
     @records = Record.includes(:user).order("created_at DESC")
@@ -25,6 +25,10 @@ class RecordsController < ApplicationController
     @comments = @record.comments.includes(:user)
     # @like = Like.new
     #  @likes = @record.likes.includes(:user)
+  end
+
+  def search
+    @records = Record.search(params[:keyword])
   end
 
   def edit

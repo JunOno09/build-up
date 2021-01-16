@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+
+<div class='item-contents'>
+    <h2 class='title'>検索結果</h2>
+    <ul class='item-lists'>
+      <% @records.each do |record| %>
+      <li class='list'>
+        <%= link_to record_path(record.id) do %>
+        <div class='item-img-content'>
+          <%= image_tag record.image, class: "item-img" %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= record.tr_theme %>
+          </h3>
+          <div class='item-price'>
+            <span><%= record.event %><br><%= record.user.nickname %></span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'><%= record.likes.count %></span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+ </div>
+<%= render "shared/footer" %>
