@@ -52,7 +52,7 @@
 - belongs_to :user
 - belongs_to :record
 
-## favorite テーブル
+## like テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
