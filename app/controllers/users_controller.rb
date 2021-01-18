@@ -5,7 +5,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @records = @user.records
     @users = @records.page(params[:page]).per(5)
-    
   end
   
 end
