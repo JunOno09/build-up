@@ -35,13 +35,14 @@ https://build-up-32508.herokuapp.com/
 ニックネーム、メールアドレス、パスワード、誕生日、氏名（全角・全角カナ）の情報を記入すると、新規登録ができます。
 
 ## ログインページ
-[![Image from Gyazo](https://i.gyazo.com/affacf633551de91373c1b912809d355.gif)](https://gyazo.com/affacf633551de91373c1b912809d355)
+[![Image from Gyazo](https://i.gyazo.com/1ad91e03aa791621171522a9d842689b.gif)](https://gyazo.com/1ad91e03aa791621171522a9d842689b)
 
 ログインページです。  
 メールアドレスとパスワードを入力するとログインできます。
 
 ## 記録投稿ページ
-[![Image from Gyazo](https://i.gyazo.com/00e897040595219e729f652992a46927.gif)](https://gyazo.com/00e897040595219e729f652992a46927)
+[![Image from Gyazo](https://i.gyazo.com/7dcaeb843dff0c9852a09951f5b625e2.gif)](https://gyazo.com/7dcaeb843dff0c9852a09951f5b625e2)
+
 練習した内容などを記録するページです。 
 練習テーマや練習した競技など簡単なフォーマットに沿って入力することで、簡単に投稿することができます。また、写真を１枚投稿することで、視覚的にその日の状況や気持ちも思い出す事ができるようにしています。
 
@@ -71,10 +72,7 @@ https://build-up-32508.herokuapp.com/
 投稿記録にお気に入り登録できる機能です。
 ログインしているユーザーのみ、お気に入り登録が可能です。解除機能も合わせて実装しております。
 
-## ページネーション
-[![Image from Gyazo](https://i.gyazo.com/492285612917f3face3cca3effe5892c.gif)](https://gyazo.com/492285612917f3face3cca3effe5892c)
 
-４つの投稿以上になるとページネーションができるように実装しました。トップページの他、マイページにも合わせて実装しております。
 
 # 工夫した点
 - 投稿内容をシンプルにすることで、気軽に利用できるように作成しました。  
