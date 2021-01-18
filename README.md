@@ -30,21 +30,18 @@ https://build-up-32508.herokuapp.com/
 # DEMO
 ## トップページ
 ## 新規登録
-[![Image from Gyazo](https://i.gyazo.com/c3ca4d1aa0ccbda2bc73643bd7ac436a.gif)](https://gyazo.com/c3ca4d1aa0ccbda2bc73643bd7ac436a)
-
+[![Image from Gyazo](https://i.gyazo.com/8b6f6a00cf03e55c759f6f71b9dd57f0.gif)](https://gyazo.com/8b6f6a00cf03e55c759f6f71b9dd57f0)
 ユーザーを新規登録するページです。  
 ニックネーム、メールアドレス、パスワード、誕生日、氏名（全角・全角カナ）の情報を記入すると、新規登録ができます。
 
 ## ログインページ
-[![Image from Gyazo](https://i.gyazo.com/71ebe11c7c6119e9736c68406ee2e4fe.gif)](https://gyazo.com/71ebe11c7c6119e9736c68406ee2e4fe)
+[![Image from Gyazo](https://i.gyazo.com/affacf633551de91373c1b912809d355.gif)](https://gyazo.com/affacf633551de91373c1b912809d355)
 
 ログインページです。  
 メールアドレスとパスワードを入力するとログインできます。
 
 ## 記録投稿ページ
-
-[![Image from Gyazo](https://i.gyazo.com/132696c4d42fe8728bae8c805bc09598.gif)](https://gyazo.com/132696c4d42fe8728bae8c805bc09598)
-
+[![Image from Gyazo](https://i.gyazo.com/00e897040595219e729f652992a46927.gif)](https://gyazo.com/00e897040595219e729f652992a46927)
 練習した内容などを記録するページです。 
 練習テーマや練習した競技など簡単なフォーマットに沿って入力することで、簡単に投稿することができます。また、写真を１枚投稿することで、視覚的にその日の状況や気持ちも思い出す事ができるようにしています。
 
@@ -75,7 +72,7 @@ https://build-up-32508.herokuapp.com/
 ログインしているユーザーのみ、お気に入り登録が可能です。解除機能も合わせて実装しております。
 
 ## ページネーション
-[![Image from Gyazo](https://i.gyazo.com/1651908b065f041726a39b2ff8122cf6.gif)](https://gyazo.com/1651908b065f041726a39b2ff8122cf6)
+[![Image from Gyazo](https://i.gyazo.com/492285612917f3face3cca3effe5892c.gif)](https://gyazo.com/492285612917f3face3cca3effe5892c)
 
 ４つの投稿以上になるとページネーションができるように実装しました。トップページの他、マイページにも合わせて実装しております。
 
