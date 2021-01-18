@@ -10,7 +10,7 @@
   </div>
   
   <ul class='item-lists'>
-      <% @records.each do |record| %>
+      <% @users.each do |record| %>
       <li class='list'>
         <%= link_to record_path(record.id) do %>
         <div class='item-img-content'>
@@ -32,6 +32,6 @@
       </li>
       <% end %> 
   </ul>
-  <%# paginate @users %>
+  <%= paginate @users %>
  </div>
 <%= render "shared/footer" %>
