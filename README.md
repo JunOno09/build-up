@@ -17,8 +17,8 @@
 
 # 本番環境
 https://build-up-32508.herokuapp.com/
-- admin:
-- password: 
+- admin:admin
+- password:2222 
 - Eメール:a11111@com
 - パスワード:a11111
 
@@ -41,8 +41,7 @@ https://build-up-32508.herokuapp.com/
 メールアドレスとパスワードを入力するとログインできます。
 
 ## 記録投稿ページ
-[![Image from Gyazo](https://i.gyazo.com/f228e5b7f1a69444a9086626d59e1267.gif)](https://gyazo.com/f228e5b7f1a69444a9086626d59e1267)
-
+[![Image from Gyazo](https://i.gyazo.com/6cb5c82a0b9bfa1110f36c13d98eac69.gif)](https://gyazo.com/6cb5c82a0b9bfa1110f36c13d98eac69)
 練習した内容などを記録するページです。 
 練習テーマや練習した競技など簡単なフォーマットに沿って入力することで、簡単に投稿することができます。また、写真を１枚投稿することで、視覚的にその日の状況や気持ちも思い出す事ができるようにしています。
 
