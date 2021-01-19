@@ -28,7 +28,6 @@ https://build-up-32508.herokuapp.com/
 そこで、今回作成したアプリでは、簡単なフォーマットに沿って入力するだけで、練習内容などを記録できるアプリを制作いたしました。
 
 # DEMO
-## トップページ
 ## 新規登録
 [![Image from Gyazo](https://i.gyazo.com/8b6f6a00cf03e55c759f6f71b9dd57f0.gif)](https://gyazo.com/8b6f6a00cf03e55c759f6f71b9dd57f0)
 ユーザーを新規登録するページです。  
